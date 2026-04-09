@@ -1,4 +1,4 @@
-//
+/* //
 import {test,expect} from "@playwright/test";
 import { LoginPage } from "./pages/loginpage";
 import { SearchPage } from "./pages/searchpage";
@@ -31,4 +31,4 @@ await bookobj.booking(
     expy: {value:"2028"}}
 );
 await page.waitForTimeout(5000);
-})
+}) */

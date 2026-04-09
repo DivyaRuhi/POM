@@ -26,7 +26,7 @@ export default defineConfig({
   reporter: [['html'],["line"],["list"],["blob"],["allure-playwright"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
+    // headless: false,
     viewport: null, // disable Playwright’s default viewport
     launchOptions: {
       args: ["--start-maximized"], // start browser maximized

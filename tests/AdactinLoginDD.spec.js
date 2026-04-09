@@ -4,7 +4,7 @@ import { LoginPage } from './pages/loginpage';
 import data from '../TestData/AdactinTestData.json';
 import logindata from '../TestData/DataDrivenTestData.json';
 import {excelReader} from "../utility/excelReader";
-//import { LoginPageDD } from './pages/loginDD';
+import { LoginPageDD } from './pages/loginDD';
 
 const logindata1 = excelReader();
 for (let DD of logindata1){
