@@ -45,22 +45,22 @@ jobs:
       run: npm install -g allure-commandline --save -dev
 
     # Generate Allure Report
-    -name: Generate Allure Report
-     if: always()
-     run: |
-      allure generate allure-results -o allure-report --clean ||true 
+    - name: Generate Allure Report
+      if: always()
+      run: |
+       allure generate allure-results -o allure-report --clean ||true 
     # Upload report as artifact
-    -name: Upload Allure Report
-    if: always() 
-    - uses: actions/upload-artifact@v4
+    - name: Upload Allure Report
+      if: always() 
+      uses: actions/upload-artifact@v4
       with:
         name: allure-report
         path: allure-report/
         retention-days: 30
     # Deploy to GitHub Pages
-    -name: Deploy Allure Report to GitHub Pages
-       if: always()
-       uses: peaceiris/actions-gh-pages@v4
-       with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: ./allure-report
+    - name: Deploy Allure Report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./allure-report
